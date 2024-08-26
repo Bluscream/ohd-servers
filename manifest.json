@@ -18,13 +18,30 @@
     "url": "https://bluscream.github.io/"
   },
   "data": {
+    "enable_top_isolation": false,
+    "externally_connectable": {
+      "matches": [
+        "https://ohd.tug.gg*"
+      ]
+    },
     "developer": {
-        "enable_auto_refresh": true,
-        "reload_delay": 1000,
-        "filter": "*.json;*.html;*.css;*.js"
+      "enable_auto_refresh": true,
+      "reload_delay": 1000,
+      "filter": "*.json;*.html;*.css;*.js"
     },
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
     "content_scripts": [
+      {
+        "matches": [
+          "src/index.html"
+        ],
+        "css": [
+          "src/site.css"
+        ],
+        "js": [
+          "src/site.js"
+        ]
+      },
       {
         "matches": [
           "https://ohd.tug.gg/servers*"

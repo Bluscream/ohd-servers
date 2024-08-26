@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[local] DOMContentLoaded');
     const runButton = document.getElementById('btnFilterCasualfield');
     const codeFrame = document.getElementById('frame');
 
