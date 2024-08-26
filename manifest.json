@@ -1,0 +1,91 @@
+{
+  "manifest_version": 2,
+  "type": "WebApp",
+  "meta": {
+    "name": "O:HD Servers",
+    "dock_button_title": "O:HD Servers",
+    "description": "Operation: Harsh Doorstop Servers WebApp for Overwolf generated at 2024-08-26 02:39:37",
+    "author": "minopia.de/ow/webapp-generator",
+    "version": "1.0.0",
+    "minimum-overwolf-version": "0.77.10",
+    "icon": "icons/IconMouseNormal.png",
+    "icon_gray": "icons/IconMouseNormal.png",
+    "launcher_icon": "icons/IconMouseNormal.png",
+    "window_icon": "icons/IconMouseNormal.png"
+  },
+  "developer": {
+    "name": "Bluscream",
+    "url": "https://bluscream.github.io/"
+  },
+  "data": {
+    "developer": {
+        "enable_auto_refresh": true,
+        "reload_delay": 1000,
+        "filter": "*.json;*.html;*.css;*.js"
+    },
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://ohd.tug.gg/servers*"
+        ],
+        "css": [
+          "src/patch.css"
+        ],
+        "js": [
+          "src/patch.js"
+        ]
+      }
+    ],
+    "start_window": "MainWindow",
+    "windows": {
+      "MainWindow": {
+        "file": "src/index.html",
+        "transparent": false,
+        "grab_keyboard_focus": true,
+        "show_in_taskbar": true,
+        "resizable": true,
+        "block_top_window_navigation": false,
+        "in_game_only": false,
+        "mute": true,
+        "size": {
+          "width": 1440,
+          "height": 810
+        },
+        "start_position": {
+          "Top": 100,
+          "Left": 100
+        }
+      }
+    },
+    "hotkeys": {
+      "open3": {
+        "title": "Show/Hide in-game",
+        "category": "Apps",
+        "default": "Alt+S",
+        "action-type": "toggle"
+      }
+    },
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [
+        736590,
+        1307180
+      ]
+    },
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "tracked": true,
+        "event_data": {
+          "game_ids": [
+            736590,
+            1307180
+          ],
+          "wait_for_stable_framerate": 30
+        },
+        "start_minimized": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+div.navbar,
+div.row:nth-child(1),
+.col-lg-2,
+.col-lg-10 > div:nth-child(1) > div:nth-child(1) {
+    display: none!important;
+}
+body {
+    padding-top: 0em;
+    padding-left: 0em;
+}
+.card-body.bg-secondary.table-responsive {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
