@@ -42,7 +42,7 @@
       "MainWindow": {
         "file": "src/index.html",
         "transparent": false,
-        "grab_keyboard_focus": true,
+        "grab_keyboard_focus": false,
         "show_in_taskbar": true,
         "resizable": true,
         "block_top_window_navigation": false,
