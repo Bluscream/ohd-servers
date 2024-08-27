@@ -18,10 +18,12 @@
     "url": "https://bluscream.github.io/"
   },
   "data": {
+    "open_dev_tools": false,
     "enable_top_isolation": false,
     "externally_connectable": {
       "matches": [
-        "https://ohd.tug.gg*"
+        "https://ohd.tug.gg*",
+        "steam://*"
       ]
     },
     "developer": {

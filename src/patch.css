@@ -4,11 +4,18 @@ div.row:nth-child(1),
 .col-lg-10 > div:nth-child(1) > div:nth-child(1) {
     display: none!important;
 }
+* {
+    font-size: 99%;
+}
 body {
     padding-top: 0em;
     padding-left: 0em;
 }
+.table-responsive {
+    background-color: black!important;
+}
 .card-body.bg-secondary.table-responsive {
+    /* background: none; */
     width: 100vw;
     height: 100vh;
     position: fixed;
